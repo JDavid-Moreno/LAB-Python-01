@@ -1,3 +1,5 @@
+import math
+
 # 1)
 
 def primer_punto(saldo):
@@ -68,7 +70,7 @@ def tercer_punto():
     inventario = [
         {"nombre": "Pan", "precio": 1500, "stock": 30},
         {"nombre": "Leche", "precio": 3500, "stock": 15},
-        {"nombre": "Café", "precio": 8000, "stock": 0},
+        {"nombre": "Café", "precio": 8000, "stock": 20},
     ]
     #a.
     print(inventario[0]["nombre"])
@@ -126,6 +128,43 @@ def tercer_punto():
             inventario.pop(inventario[i])
     print(inventario)
 
+    #j.
+    ordenPrecio = sorted(inventario, key=lambda x: x["stock"])
+    #[{'nombre': 'huevos', 'precio': 5500.0, 'stock': 8}, 
+    # {'nombre': 'Leche', 'precio': 3850.0, 'stock': 13}, 
+    # {'nombre': 'Café', 'precio': 8800.0, 'stock': 20}, 
+    # {'nombre': 'Pan', 'precio': 1650.0, 'stock': 30}]
+
+def cuarto_punto():
+    # Tupla: coordenadas (x, y)
+    punto = (3, 7)
+    print("Punto:", punto)
+
+    #a
+    rectangulo = (3,4)
+
+    #b.
+    area = rectangulo[0] * rectangulo[1]
+    perimetro = 2 * (rectangulo[0] + rectangulo[1])
+
+    posiciones = [(0, 0), (1, 2), (3, 4)]
+
+    distancia_PuntoUnoPuntoDos = math.sqrt((posiciones[0][0] - posiciones[1][0])**2 + (posiciones[0][1] - posiciones[1][1])**2)
+    disttancia_PuntoDosPuntoTres = math.sqrt((posiciones[1][0] - posiciones[2][0])**2 + (posiciones[1][1] - posiciones[2][1])**2)
+    distancia_total = distancia_PuntoUnoPuntoDos + disttancia_PuntoDosPuntoTres
+    print(f"distancia entre puntos uno y dos: {distancia_PuntoUnoPuntoDos:.2f}")
+    print(f"distancia entre puntos dos y tres: {disttancia_PuntoDosPuntoTres:.2f}")
+    print(f"distancia total: {distancia_total:.2f}")
+
+def quinto_punto():
+    biblioteca = {
+        "libros": [
+            {"titulo": "1984", "autor": "George Orwell", "prestado": False},
+            {"titulo": "El Principito", "autor": "Antoine de Saint-Exupéry", "prestado": True},
+        ],
+        "usuarios": ["Ana", "Luis", "María"]
+    }
+        
 
 def main():
     punto = int(input("punto a revisar: "))
@@ -140,6 +179,12 @@ def main():
                 punto = int(input("punto a revisar: "))
             case 3:
                 tercer_punto()
+                punto = int(input("punto a revisar: "))
+            case 4:
+                cuarto_punto()
+                punto = int(input("punto a revisar: "))
+            case 5:
+                quinto_punto()
                 punto = int(input("punto a revisar: "))
                 
             case _:
