@@ -1,0 +1,25 @@
+1. ¿Cuál fue el tiempo total invertido en el laboratorio por cada uno de ustedes? (Horas/Hombre)
+
+5 horas
+
+2. ¿Cuál es el estado actual del laboratorio? ¿Por qué?
+
+Terminado, faltaron algunas explicaciones pero en codigo nada.
+
+3. ¿Cuál consideran fue el mayor logro? ¿Por qué?
+
+entender el funcionamiento de la API de pokemon y poder realizar una consulta de un pokemon específico.
+
+4. ¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+
+entender la API y como buscar claves de diccionarios dentro de una lista
+
+5. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+
+mejorar el tiempo y dedicar mas estudio a como funcionan las APIs
+
+6. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+
+https://jsonplaceholder.typicode.com/users
+https://pokeapi.co/api/v2/pokemon/
+https://www.w3schools.com/python/python_dictionaries.asp

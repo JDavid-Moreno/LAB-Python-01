@@ -43,14 +43,56 @@ def cuarto_punto():
     for i in range(1, 11):
         if i % 2 == 0:
             suma_pares += i
+        #a.
         else:
             suma_impares += i
 
     print("Suma de los pares:", suma_pares)
+    #b.
+    sumas = {}
+    sumas["pares"] = suma_pares
+    sumas["impares"] = suma_impares
+    print(sumas)
 
+def quinto_punto():
+    productos = []
+    while True:
+        nombre = input("Ingrese producto (o 'fin' para salir): ")
+        if nombre == "fin":
+            break
+        precio = float(input("Precio: "))
+        #a.
+        if precio < 0:
+            print("Precio no válido")
+            continue
+        cantidad = int(input("Cantidad: "))
+        productos.append({"nombre": nombre, "precio": precio, "cantidad": cantidad})
+    
+    #b.
+    productoMasCaro = max(productos, key=lambda x: x["precio"])
+    print(productoMasCaro)
 
+    #c.
+    inventario = {}
+    inventario["productos"] = productos
+    inventario["precio"] = precio
+    inventario["cantidad"] = cantidad
+    print(inventario)
+
+    # Mostrar total
+    total = 0
+    for p in productos:
+        total += p["precio"] * p["cantidad"]
+
+    print("Total del inventario:", total)
 
 def main():
+    print("1. Primer punto")
+    print("2. Segundo punto")
+    print("3. Tercer punto")
+    print("4. Cuarto punto")
+    print("5. Quinto punto")
+    print("6. Salir")
     punto = int(input("punto a revisar: "))
     while punto != 6:
         match punto:

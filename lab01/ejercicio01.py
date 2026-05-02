@@ -167,6 +167,12 @@ def quinto_punto():
         
 
 def main():
+    print("1. Primer punto")
+    print("2. Segundo punto")
+    print("3. Tercer punto")
+    print("4. Cuarto punto")
+    print("5. Quinto punto")
+    print("6. Salir")
     punto = int(input("punto a revisar: "))
     while punto != 6:
         match punto:
